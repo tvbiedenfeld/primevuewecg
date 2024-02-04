@@ -48,7 +48,11 @@ export default {
         },
         severity: {
             type: String,
-            default: null
+            default: 'primary'
+        },
+        variant: {
+            type: String,
+            default: 'base'
         },
         raised: {
             type: Boolean,
