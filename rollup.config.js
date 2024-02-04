@@ -451,7 +451,7 @@ function addServices() {
 function addPackageJson() {
     const outputDir = 'dist';
     const packageJson = `{
-    "name": "@wecg/primevue",
+    "name": "@tovobi/primevue",
     "version": "${pkg.version}",
     "private": false,
     "author": "PrimeTek Informatics",
