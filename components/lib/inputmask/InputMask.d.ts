@@ -120,10 +120,15 @@ export interface InputMaskProps {
      */
     invalid?: boolean | undefined;
     /**
-     * Specifies the input variant of the component.
+     * Specifies the input peculiarity of the component.
      * @defaultValue outlined
      */
-    variant?: 'outlined' | 'filled' | undefined;
+    peculiarity?: 'outlined' | 'filled' | undefined;
+    /**
+     * Defines the variant of the component.
+     * @defaultValue base
+     */
+    variant?: 'base' | 'info' | 'warning' | 'help' | 'danger' | string | undefined;
     /**
      * Used to pass attributes to DOM elements inside the component.
      * @type {InputMaskPassThroughOptions}

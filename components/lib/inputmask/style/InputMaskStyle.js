@@ -6,7 +6,7 @@ const classes = {
         {
             'p-filled': instance.filled,
             'p-invalid': props.invalid,
-            'p-variant-filled': props.variant ? props.variant === 'filled' : instance.$primevue.config.inputStyle === 'filled'
+            'p-variant-filled': props.peculiarity ? props.peculiarity === 'filled' : instance.$primevue.config.inputStyle === 'filled'
         }
     ]
 };

@@ -273,10 +273,15 @@ export interface InputNumberProps {
      */
     disabled?: boolean | undefined;
     /**
-     * Specifies the input variant of the component.
+     * Specifies the input peculiarity of the component.
      * @defaultValue outlined
      */
-    variant?: 'outlined' | 'filled' | undefined;
+    peculiarity?: 'outlined' | 'filled' | undefined;
+    /**
+     * Defines the variant of the component.
+     * @defaultValue base
+     */
+    variant?: 'base' | 'info' | 'warning' | 'help' | 'danger' | string | undefined;
     /**
      * When present, it specifies that an input field is read-only.
      * @defaultValue false

@@ -31,9 +31,13 @@ export default {
             type: Boolean,
             default: false
         },
-        variant: {
+        peculiarity: {
             type: String,
             default: null
+        },
+        variant: {
+            type: String,
+            default: 'base'
         }
     },
     style: InputMaskStyle

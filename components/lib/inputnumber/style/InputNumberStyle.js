@@ -120,7 +120,7 @@ const classes = {
     input: ({ props, instance }) => [
         'p-inputnumber-input',
         {
-            'p-variant-filled': props.variant ? props.variant === 'filled' : instance.$primevue.config.inputStyle === 'filled'
+            'p-variant-filled': props.peculiarity ? props.peculiarity === 'filled' : instance.$primevue.config.inputStyle === 'filled'
         }
     ],
     buttonGroup: 'p-inputnumber-button-group',
