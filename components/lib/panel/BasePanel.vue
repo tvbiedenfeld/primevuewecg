@@ -9,6 +9,10 @@ export default {
         header: String,
         toggleable: Boolean,
         collapsed: Boolean,
+        size: {
+            type: String,
+            default: null
+        },
         toggleButtonProps: {
             type: null,
             default: null
