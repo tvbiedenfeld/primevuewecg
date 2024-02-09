@@ -98,6 +98,10 @@ export default {
             type: String,
             default: undefined
         },
+        size: {
+            type: String,
+            default: null
+        },
         style: null,
         class: null
     },

@@ -229,6 +229,10 @@ export interface FileUploadPassThroughOptions {
      */
     cancelButton?: ButtonPassThroughOptions<FileUploadPassThroughMethodOptions>;
     /**
+     * Defines the size of the component.
+     */
+    size?: 'small' | 'medium' | 'large' | string | undefined;
+    /**
      * Used to pass attributes to the content's DOM element.
      */
     content?: FileUploadPassThroughOptionType;
