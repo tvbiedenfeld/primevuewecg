@@ -229,10 +229,6 @@ export interface FileUploadPassThroughOptions {
      */
     cancelButton?: ButtonPassThroughOptions<FileUploadPassThroughMethodOptions>;
     /**
-     * Defines the size of the component.
-     */
-    size?: 'small' | 'medium' | 'large' | string | undefined;
-    /**
      * Used to pass attributes to the content's DOM element.
      */
     content?: FileUploadPassThroughOptionType;
@@ -443,6 +439,10 @@ export interface FileUploadProps {
      * @deprecated since v3.27.0. Use 'cancelicon' slot.
      */
     cancelIcon?: string | undefined;
+    /**
+     * Defines the size of the component.
+     */
+    size?: 'small' | 'medium' | 'large' | string | undefined;
     /**
      * Inline style of the component.
      */
