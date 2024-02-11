@@ -1,30 +1,6 @@
 <template>
     <div v-if="isAdvanced" :class="cx('root')" v-bind="ptm('root')">
         <input ref="fileInput" type="file" @change="onFileSelect" :multiple="multiple" :accept="accept" :disabled="chooseDisabled" v-bind="ptm('input')" />
-        <div :class="cx('buttonbar')" v-bind="ptm('buttonbar')">
-            <slot name="header" :files="files" :uploadedFiles="uploadedFiles" :chooseCallback="choose" :uploadCallback="upload" :clearCallback="clear">
-                <span v-ripple :class="chooseButtonClass" :style="style" @click="choose" @keydown.enter="choose" @focus="onFocus" @blur="onBlur" tabindex="0" v-bind="ptm('chooseButton')">
-                    <slot name="chooseicon" :class="cx('chooseIcon')">
-                        <component :is="chooseIcon ? 'span' : 'PlusIcon'" :class="[cx('chooseIcon'), chooseIcon]" aria-hidden="true" v-bind="ptm('chooseIcon')" />
-                    </slot>
-                    <span :class="cx('chooseButtonLabel')" v-bind="ptm('chooseButtonLabel')">{{ chooseButtonLabel }}</span>
-                </span>
-                <FileUploadButton v-if="showUploadButton" :label="uploadButtonLabel" @click="upload" :disabled="uploadDisabled" :unstyled="unstyled" :pt="ptm('uploadButton')">
-                    <template #icon="iconProps">
-                        <slot name="uploadicon">
-                            <component :is="uploadIcon ? 'span' : 'UploadIcon'" :class="[iconProps.class, uploadIcon]" aria-hidden="true" v-bind="ptm('uploadButton')['icon']" data-pc-section="uploadbuttonicon" />
-                        </slot>
-                    </template>
-                </FileUploadButton>
-                <FileUploadButton v-if="showCancelButton" :label="cancelButtonLabel" @click="clear" :disabled="cancelDisabled" :unstyled="unstyled" :pt="ptm('cancelButton')">
-                    <template #icon="iconProps">
-                        <slot name="cancelicon">
-                            <component :is="cancelIcon ? 'span' : 'TimesIcon'" :class="[iconProps.class, cancelIcon]" aria-hidden="true" v-bind="ptm('cancelButton')['icon']" data-pc-section="cancelbuttonicon" />
-                        </slot>
-                    </template>
-                </FileUploadButton>
-            </slot>
-        </div>
         <div ref="content" :class="cx('content')" @dragenter="onDragEnter" @dragover="onDragOver" @dragleave="onDragLeave" @drop="onDrop" v-bind="ptm('content')" :data-p-highlight="false">
             <slot name="content" :files="files" :uploadedFiles="uploadedFiles" :removeUploadedFileCallback="removeUploadedFile" :removeFileCallback="remove" :progress="progress" :messages="messages">
                 <FileUploadProgressBar v-if="hasFiles" :value="progress" :showValue="false" :unstyled="unstyled" :pt="ptm('progressbar')" />
@@ -49,6 +25,31 @@
             <span :class="cx('label')" v-bind="ptm('label')">{{ basicChooseButtonLabel }}</span>
             <input v-if="!hasFiles" ref="fileInput" type="file" :accept="accept" :disabled="disabled" :multiple="multiple" @change="onFileSelect" @focus="onFocus" @blur="onBlur" v-bind="ptm('input')" />
         </span>
+    </div>
+    <div :class="cx('buttonbar')" v-bind="ptm('buttonbar')">
+        <slot name="buttonbar" :files="files" :uploadedFiles="uploadedFiles" :chooseCallback="choose" :uploadCallback="upload" :clearCallback="clear">
+            <FileUploadButton :label="chooseButtonLabel" @click="choose" :disabled="chooseDisabled" :unstyled="unstyled" :pt="ptm('chooseButton')">
+                <template #icon="iconProps">
+                    <slot name="chooseButton">
+                        <component :is="chooseIcon ? 'span' : 'PlusIcon'" :class="[iconProps.class, chooseIcon]" aria-hidden="true" v-bind="ptm('chooseIcon')" data-pc-section="choosebuttonicon" />
+                    </slot>
+                </template>
+            </FileUploadButton>
+            <FileUploadButton v-if="showUploadButton" :label="uploadButtonLabel" @click="upload" :disabled="uploadDisabled" :unstyled="unstyled" :pt="ptm('uploadButton')">
+                <template #icon="iconProps">
+                    <slot name="uploadicon">
+                        <component :is="uploadIcon ? 'span' : 'UploadIcon'" :class="[iconProps.class, uploadIcon]" aria-hidden="true" v-bind="ptm('uploadButton')['icon']" data-pc-section="uploadbuttonicon" />
+                    </slot>
+                </template>
+            </FileUploadButton>
+            <FileUploadButton v-if="showCancelButton" :label="cancelButtonLabel" @click="clear" :disabled="cancelDisabled" :unstyled="unstyled" :pt="ptm('cancelButton')">
+                <template #icon="iconProps">
+                    <slot name="cancelicon">
+                        <component :is="cancelIcon ? 'span' : 'TimesIcon'" :class="[iconProps.class, cancelIcon]" aria-hidden="true" v-bind="ptm('cancelButton')['icon']" data-pc-section="cancelbuttonicon" />
+                    </slot>
+                </template>
+            </FileUploadButton>
+        </slot>
     </div>
 </template>
 
