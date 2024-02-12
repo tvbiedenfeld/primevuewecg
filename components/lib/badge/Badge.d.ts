@@ -53,6 +53,14 @@ export interface BadgePassThroughOptions<T = any> {
      */
     root?: BadgePassThroughOptionType<T>;
     /**
+     * Used to pass attributes to the icon's DOM element.
+     */
+    icon?: BadgePassThroughOptionType<T>;
+    /**
+     * Used to pass attributes to the label's DOM element.
+     */
+    label?: BadgePassThroughOptionType<T>;
+    /**
      * Used to manage all lifecycle hooks.
      * @see {@link BaseComponent.ComponentHooks}
      */
