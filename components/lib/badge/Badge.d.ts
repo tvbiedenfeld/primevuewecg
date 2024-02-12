@@ -68,13 +68,27 @@ export interface BadgeProps {
      */
     value?: string | number;
     /**
-     * Severity type of the badge.
+     * Name of the icon.
      */
-    severity?: 'secondary' | 'info' | 'success' | 'warning' | 'danger' | 'contrast' | string | null | undefined;
+    icon?: string | undefined;
     /**
-     * Size of the badge, valid options are 'large' and 'xlarge'.
+     * Position of the icon.
+     * @defaultValue left
      */
-    size?: 'large' | 'xlarge' | null | undefined;
+    iconPos?: 'left' | 'right' | 'top' | 'bottom' | undefined;
+    /**
+     * Style class of the icon.
+     */
+    iconClass?: string | undefined;
+    /**
+     * Defines the variant of the badge.
+     * @defaultValue base
+     */
+    variant?: 'base' | 'info' | 'warning' | 'help' | 'danger' | string | undefined;
+    /**
+     * Defines the size of the badge.
+     */
+    size?: 'small' | 'medium' | 'large' | string | undefined;
     /**
      * Used to pass attributes to DOM elements inside the component.
      * @type {BadgePassThroughOptions}
@@ -90,6 +104,16 @@ export interface BadgeProps {
      * @defaultValue false
      */
     unstyled?: boolean;
+}
+/**
+ * Defines current options in Badge component.
+ */
+export interface BadgeContext {
+    /**
+     * Current disabled state of the element as a boolean.
+     * @defaultValue false
+     */
+    disabled: boolean;
 }
 
 /**

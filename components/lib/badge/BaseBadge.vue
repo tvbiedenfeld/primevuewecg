@@ -6,11 +6,23 @@ export default {
     name: 'BaseBadge',
     extends: BaseComponent,
     props: {
-        value: {
+        label: {
             type: [String, Number],
             default: null
         },
-        severity: {
+        icon: {
+            type: String,
+            default: null
+        },
+        iconPos: {
+            type: String,
+            default: 'left'
+        },
+        iconClass: {
+            type: String,
+            default: null
+        },
+        variant: {
             type: String,
             default: null
         },
