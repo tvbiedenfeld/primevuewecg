@@ -84,7 +84,7 @@ export interface BadgeProps {
      * Defines the variant of the badge.
      * @defaultValue base
      */
-    variant?: 'base' | 'info' | 'warning' | 'help' | 'danger' | string | undefined;
+    variant?: 'base' | 'danger' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
     /**
      * Defines the size of the badge.
      */

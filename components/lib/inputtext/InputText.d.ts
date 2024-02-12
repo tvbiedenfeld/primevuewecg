@@ -105,7 +105,7 @@ export interface InputTextProps extends InputHTMLAttributes {
      * Defines the variant of the component.
      * @defaultValue base
      */
-    variant?: 'base' | 'info' | 'warning' | 'help' | 'danger' | string | undefined;
+    variant?: 'base' | 'danger' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
     /**
      * Used to pass attributes to DOM elements inside the component.
      * @type {InputTextPassThroughOptions}

@@ -138,12 +138,12 @@ export interface ButtonProps extends ButtonHTMLAttributes {
      * Defines the style of the button.
      * @defaultValue primary
      */
-    severity?: 'primary' | 'secondary' | 'soft'  | 'contrast' | string | undefined;
+    severity?: 'primary' | 'secondary' | 'soft' | 'contrast' | string | undefined;
     /**
      * Defines the variant of the button.
      * @defaultValue base
      */
-    variant?: 'base' | 'info' | 'warning' | 'help' | 'danger' | string | undefined;
+    variant?: 'base' | 'danger' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
     /**
      * Add a shadow to indicate elevation.
      * @defaultValue false
@@ -167,7 +167,7 @@ export interface ButtonProps extends ButtonHTMLAttributes {
     /**
      * Defines the size of the button.
      */
-    size?: 'small' |'medium' | 'large' | string | undefined;
+    size?: 'small' | 'medium' | 'large' | string | undefined;
     /**
      * Add a plain textual class to the button without a background initially.
      * @defaultValue false

@@ -281,7 +281,7 @@ export interface InputNumberProps {
      * Defines the variant of the component.
      * @defaultValue base
      */
-    variant?: 'base' | 'info' | 'warning' | 'help' | 'danger' | string | undefined;
+    variant?: 'base' | 'danger' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
     /**
      * When present, it specifies that an input field is read-only.
      * @defaultValue false
