@@ -6,7 +6,7 @@
                 <SpinnerIcon v-else :class="[cx('loadingIcon'), cx('icon')]" spin v-bind="ptm('loadingIcon')" />
             </slot>
             <slot v-else name="icon" :class="[cx('icon')]">
-                <span v-if="icon" :class="[cx('icon'), icon, iconClass]" v-bind="ptm('icon')"></span>
+                <WecgIcon v-if="icon" :icon="icon" :class="[cx('icon'), icon, iconClass]" v-bind="ptm('icon')" :label="icon" :size="size" :variant="variant" :spin="loading"></WecgIcon>
             </slot>
             <span :class="cx('label')" v-bind="ptm('label')">{{ label || '&nbsp;' }}</span>
             <Badge v-if="badge" :value="badge" :class="badgeClass" :severity="badgeSeverity" :unstyled="unstyled" v-bind="ptm('badge')"></Badge>
@@ -19,6 +19,7 @@ import Badge from 'primevue/badge';
 import SpinnerIcon from 'primevue/icons/spinner';
 import Ripple from 'primevue/ripple';
 import BaseButton from './BaseButton.vue';
+import WecgIcon from 'primevue/wecgicon/';
 
 export default {
     name: 'Button',
@@ -45,7 +46,8 @@ export default {
     },
     components: {
         SpinnerIcon,
-        Badge
+        Badge,
+        WecgIcon
     },
     directives: {
         ripple: Ripple

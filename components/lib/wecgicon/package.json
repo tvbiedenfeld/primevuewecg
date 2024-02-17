@@ -1,0 +1,9 @@
+{
+    "main": "./wecgicon.cjs.js",
+    "module": "./wecgicon.esm.js",
+    "unpkg": "./wecgicon.min.js",
+    "types": "./WecgIcon.d.ts",
+    "browser": {
+        "./sfc": "./WecgIcon.vue"
+    }
+}

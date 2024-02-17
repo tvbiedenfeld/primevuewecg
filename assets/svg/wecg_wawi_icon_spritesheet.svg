@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.add" viewBox="0 0 60 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M50 30H10m20 20V10"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.check" viewBox="0 0 60 50.23">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M50 10 28.73 38.87a3.38 3.38 0 0 1-2.27 1.34c-.88.11-1.79-.14-2.49-.7L10 28.33"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.chevron-down" viewBox="0 0 60 40">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m10 10 20 20 20-20"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.chevron-left" viewBox="0 0 40 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M30 10 10 30l20 20"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.chevron-right" viewBox="0 0 40 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m10 50 20-20-20-20"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.chevron-up" viewBox="0 0 60 40">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M50 30 30 10 10 30"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.close" viewBox="0 0 60 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M50 50 10 10m0 40 40-40"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.copy" viewBox="0 0 60 60">
+        <defs>
+            <style>.hcls-1,.mcls-1,.ocls-1,.qcls-1{fill:none;stroke:#333;stroke-linecap:round;stroke-linejoin:round;stroke-width:20px}</style>
+        </defs>
+        <g id="hEbene_1-2">
+            <path d="M20.77 50h26.15c1.69 0 3.08-1.38 3.08-3.08V20.77c0-1.69-1.38-3.08-3.08-3.08H20.77c-1.69 0-3.08 1.38-3.08 3.08v26.15c0 1.69 1.38 3.08 3.08 3.08z" class="hcls-1"/>
+            <path d="M10 40.77V13.08c0-.83.34-1.6.89-2.18.58-.58 1.35-.89 2.18-.89h27.69" class="hcls-1"/>
+        </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.delete" viewBox="0 0 59.99 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m45.64 16.95-3.16 29.93A3.48 3.48 0 0 1 39.02 50H20.93c-1.77 0-3.27-1.34-3.46-3.12l-3.14-29.93m-4.34 0h39.99m-27.82 0v-5.22c0-.97.78-1.73 1.73-1.73h12.17c.96 0 1.73.78 1.73 1.73v5.22m-7.81 7.83v18.26m7.83-18.26-.87 18.26M22.16 24.78l.87 18.26"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.download" viewBox="0 0 60 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M50 41.31v3.48c0 2.88-2.34 5.22-5.22 5.22H15.22c-2.88 0-5.22-2.34-5.22-5.22v-3.48m20-.2V10m0 31.11 12.73-12.73M30 41.11 17.27 28.38"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.edit" viewBox="0 0 60 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m47.76 20.85-8.61-8.61m4.99 12.2-8.56-8.6m-13.9 31.09-8.61-8.61m8.18 9.04L10 50l2.64-11.25 27.74-27.74a3.476 3.476 0 0 1 4.92 0l3.69 3.69a3.476 3.476 0 0 1 0 4.92z"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.error" viewBox="0 0 60 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M38.7 21.3 21.3 38.7m17.4 0L21.3 21.3M50 30c0 11.05-8.95 20-20 20s-20-8.95-20-20 8.95-20 20-20 20 8.95 20 20"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.mail" viewBox="0 0 60 46.09">
+        <g id="mEbene_1-2">
+            <path d="M12.61 10h34.78S50 10 50 12.61v20.86s0 2.61-2.61 2.61H12.61s-2.61 0-2.61-2.61V12.61S10 10 12.61 10" class="mcls-1"/>
+            <path d="M44.78 16.95 30 26.51l-14.77-9.56m-.01 13.04 6.08-3.48m23.48 3.48-6.08-3.48" class="mcls-1"/>
+        </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.phone" viewBox="0 0 60 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M24.7 21.64a4.213 4.213 0 0 0 0-5.95l-4.46-4.46a4.213 4.213 0 0 0-5.95 0l-2.45 2.45a6.31 6.31 0 0 0-.79 7.94 97.768 97.768 0 0 0 27.34 27.34 6.273 6.273 0 0 0 7.93-.8l2.45-2.45a4.213 4.213 0 0 0 0-5.95l-4.46-4.46a4.213 4.213 0 0 0-5.95 0l-1.48 1.48c-4.99-4.1-9.58-8.68-13.68-13.68l1.5-1.48v.03z"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.save" viewBox="0 0 60 60">
+        <g id="oEbene_1-2">
+            <path d="M50 48.26c0 .96-.78 1.74-1.74 1.74H11.74c-.96 0-1.74-.78-1.74-1.74V18.55c0-.45.18-.91.51-1.23l6.81-6.81c.33-.33.76-.51 1.23-.51h29.71c.96 0 1.74.78 1.74 1.74v36.53-.02z" class="ocls-1"/>
+            <path d="M16.95 30.87h26.08c.96 0 1.74.78 1.74 1.74V50H15.21V32.61c0-.96.78-1.74 1.74-1.74M18.69 10H41.3v10.44c0 .96-.78 1.74-1.74 1.74H20.43c-.96 0-1.74-.78-1.74-1.74z" class="ocls-1"/>
+        </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.search" viewBox="0 0 60 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M33.74 33.74 50 50M37.83 23.91c0 7.68-6.23 13.91-13.91 13.91s-13.91-6.23-13.91-13.91S16.24 10 23.92 10s13.91 6.23 13.91 13.91"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.setup" viewBox="0 0 57.57 60">
+        <g id="qEbene_1-2">
+            <path d="M42.01 42.76c1.07.6 2.44.23 3.04-.8l2.24-3.84c.6-1.07.23-2.44-.8-3.04l-2.54-1.47c.6-2.37.6-4.84 0-7.17l2.5-1.47c1.07-.6 1.43-1.97.8-3.04l-2.24-3.84c-.6-1.07-1.97-1.43-3.04-.83l-2.5 1.47c-1.77-1.67-3.9-2.87-6.24-3.57v-2.94c0-1.23-1-2.24-2.24-2.24h-4.44c-1.23 0-2.24 1-2.24 2.24v2.94c-2.34.7-4.47 1.9-6.24 3.57l-2.5-1.47c-1.07-.6-2.44-.23-3.04.8l-2.24 3.84c-.6 1.07-.23 2.44.8 3.04l2.5 1.47c-.6 2.37-.6 4.84 0 7.17l-2.54 1.47a2.23 2.23 0 0 0-.77 3.04l2.24 3.84c.6 1.07 1.97 1.43 3.04.8l2.54-1.47c1.77 1.67 3.9 2.87 6.24 3.57v2.94c0 1.23 1 2.24 2.24 2.24h4.44c1.23 0 2.24-1 2.24-2.24v-2.94c2.34-.7 4.47-1.9 6.24-3.57l2.47 1.47.03.03z" class="qcls-1"/>
+            <path d="M28.83 36.69c3.68 0 6.67-2.99 6.67-6.67s-2.99-6.67-6.67-6.67-6.67 2.99-6.67 6.67 2.99 6.67 6.67 6.67" class="qcls-1"/>
+        </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.success" viewBox="0 0 60 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M41.51 21.3 29.27 37.91c-.31.42-.78.7-1.3.77-.51.07-1.03-.08-1.44-.4l-8.04-6.43M50 30.01c0 11.05-8.95 20-20 20s-20-8.95-20-20S18.95 10 30 10s20 8.95 20 20z"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="svg.upload" viewBox="0 0 60 60">
+        <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M50 41.31v3.48c0 2.88-2.34 5.22-5.22 5.22H15.22c-2.88 0-5.22-2.34-5.22-5.22v-3.48M30 10v31.11M30 10 17.27 22.73M30 10l12.73 12.73"/>
+    </symbol>
+</svg>
