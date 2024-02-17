@@ -41,7 +41,7 @@ export default {
     },
     methods: {
         initChart() {
-            import('chart.js/auto').then((module) => {
+            import('chart.js/auto/').then((module) => {
                 if (this.chart) {
                     this.chart.destroy();
                     this.chart = null;
