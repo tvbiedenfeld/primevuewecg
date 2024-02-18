@@ -1,12 +1,11 @@
 <template>
     <button v-ripple :class="cx('root')" type="button" :aria-label="defaultAriaLabel" :disabled="disabled" v-bind="getPTOptions('root')" :data-pc-severity="severity">
         <slot>
-            <slot v-if="loading" name="loadingicon" :class="[cx('loadingIcon'), cx('icon')]">
-                <span v-if="loadingIcon" :class="[cx('loadingIcon'), cx('icon'), loadingIcon]" v-bind="ptm('loadingIcon')" />
-                <SpinnerIcon v-else :class="[cx('loadingIcon'), cx('icon')]" spin v-bind="ptm('loadingIcon')" />
+            <slot v-if="loading" name="loadingIcon" :class="[cx('loadingIcon'), cx('icon')]">
+                <WecgIcon icon="loading" :class="cx('iconClass')" v-bind="ptm('loadingIcon')" label="loading" :size="size" :variant="variant" :disabled="disabled" spin></WecgIcon>
             </slot>
             <slot v-else name="icon" :class="[cx('icon')]">
-                <WecgIcon v-if="icon" :icon="icon" :class="[iconClass]" v-bind="ptm('icon')" :label="icon" :size="size" :variant="variant" :spin="loading"></WecgIcon>
+                <WecgIcon v-if="icon" :icon="icon" :class="cx('iconClass')" v-bind="ptm('icon')" :label="icon" :size="size" :variant="variant" :disabled="disabled"></WecgIcon>
             </slot>
             <span :class="cx('label')" v-bind="ptm('label')">{{ label || '&nbsp;' }}</span>
             <Badge v-if="badge" :value="badge" :class="badgeClass" :severity="badgeSeverity" :unstyled="unstyled" v-bind="ptm('badge')"></Badge>
@@ -16,7 +15,6 @@
 
 <script>
 import Badge from 'primevue/badge';
-import SpinnerIcon from 'primevue/icons/spinner';
 import Ripple from 'primevue/ripple';
 import BaseButton from './BaseButton.vue';
 import WecgIcon from 'primevue/wecgicon/';
@@ -45,7 +43,6 @@ export default {
         }
     },
     components: {
-        SpinnerIcon,
         Badge,
         WecgIcon
     },

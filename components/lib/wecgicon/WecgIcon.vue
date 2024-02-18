@@ -21,7 +21,7 @@ export default {
         },
         spritesheet: {
             type: String,
-            default: '../www/static/svg/wecg_wawi_icon_spritesheet.svg'
+            default: '../src/assets/icons/wecg_wawi_icon_spritesheet.svg'
         },
         variant: {
             type: String,
@@ -41,6 +41,10 @@ export default {
         color: {
             type: String,
             default: '#FFFFFF'
+        },
+        disabled: {
+            type: Boolean,
+            default: false
         }
     },
     methods: {
