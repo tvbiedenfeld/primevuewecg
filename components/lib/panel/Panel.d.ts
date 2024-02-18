@@ -152,7 +152,7 @@ export interface PanelProps {
     /**
      * Defines the size of the component.
      */
-    size?: 'small' | 'large' | undefined;
+    size?: 'small' | 'medium' | 'large' | undefined;
     /**
      * Used to pass the custom value to read for the button inside the component.
      * @deprecated since v3.26.0. Use 'pt' property instead.
