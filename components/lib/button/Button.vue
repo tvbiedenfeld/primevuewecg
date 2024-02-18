@@ -6,7 +6,7 @@
                 <SpinnerIcon v-else :class="[cx('loadingIcon'), cx('icon')]" spin v-bind="ptm('loadingIcon')" />
             </slot>
             <slot v-else name="icon" :class="[cx('icon')]">
-                <WecgIcon v-if="icon" :icon="icon" :class="[cx('icon'), icon, iconClass]" v-bind="ptm('icon')" :label="icon" :size="size" :variant="variant" :spin="loading"></WecgIcon>
+                <WecgIcon v-if="icon" :icon="icon" :class="[iconClass]" v-bind="ptm('icon')" :label="icon" :size="size" :variant="variant" :spin="loading"></WecgIcon>
             </slot>
             <span :class="cx('label')" v-bind="ptm('label')">{{ label || '&nbsp;' }}</span>
             <Badge v-if="badge" :value="badge" :class="badgeClass" :severity="badgeSeverity" :unstyled="unstyled" v-bind="ptm('badge')"></Badge>
