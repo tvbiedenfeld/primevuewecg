@@ -22,7 +22,7 @@
         />
         <div :class="cx('box')" v-bind="getPTOptions('box')">
             <slot name="icon" :checked="checked" :class="cx('icon')">
-                <WecgIcon v-if="checked" :icon="check" :class="cx('iconClass')" v-bind="ptm('icon')" :label="icon" :size="size" :variant="variant" :disabled="disabled"></WecgIcon>
+                <WecgIcon v-if="checked" icon="check" :class="cx('iconClass')" v-bind="ptm('icon')" :label="icon" :size="size" :variant="variant" :disabled="disabled"></WecgIcon>
             </slot>
         </div>
     </div>
