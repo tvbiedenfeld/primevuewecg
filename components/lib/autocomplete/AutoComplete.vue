@@ -1,5 +1,5 @@
 <template>
-    <div ref="container" :class="cx('root')" :style="sx('root')" @click="onContainerClick" v-bind="ptm('root')">
+    <div ref="container" :class="cx('root')" :style="sx('root')" @click="onContainerClick" v-bind="ptmi('root')">
         <input
             v-if="!multiple"
             ref="focusInput"
@@ -20,6 +20,7 @@
             :aria-expanded="overlayVisible"
             :aria-controls="id + '_list'"
             :aria-activedescendant="focused ? focusedOptionId : undefined"
+            :aria-invalid="invalid || undefined"
             @focus="onFocus"
             @blur="onBlur"
             @keydown="onKeyDown"
@@ -78,6 +79,7 @@
                     :aria-expanded="overlayVisible"
                     :aria-controls="id + '_list'"
                     :aria-activedescendant="focused ? focusedOptionId : undefined"
+                    :aria-invalid="invalid || undefined"
                     @focus="onFocus"
                     @blur="onBlur"
                     @keydown="onKeyDown"
@@ -178,6 +180,7 @@ import BaseAutoComplete from './BaseAutoComplete.vue';
 export default {
     name: 'AutoComplete',
     extends: BaseAutoComplete,
+    inheritAttrs: false,
     emits: ['update:modelValue', 'change', 'focus', 'blur', 'item-select', 'item-unselect', 'dropdown-click', 'clear', 'complete', 'before-show', 'before-hide', 'show', 'hide'],
     outsideClickListener: null,
     resizeListener: null,

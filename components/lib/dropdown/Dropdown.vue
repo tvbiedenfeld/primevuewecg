@@ -1,5 +1,5 @@
 <template>
-    <div ref="container" :id="id" :class="cx('root')" @click="onContainerClick" v-bind="ptm('root')">
+    <div ref="container" :id="id" :class="cx('root')" @click="onContainerClick" v-bind="ptmi('root')">
         <input
             v-if="editable"
             ref="focusInput"
@@ -19,6 +19,7 @@
             :aria-expanded="overlayVisible"
             :aria-controls="id + '_list'"
             :aria-activedescendant="focused ? focusedOptionId : undefined"
+            :aria-invalid="invalid || undefined"
             @focus="onFocus"
             @blur="onBlur"
             @keydown="onKeyDown"
@@ -81,6 +82,7 @@
                                 type="text"
                                 :value="filterValue"
                                 @vue:mounted="onFilterUpdated"
+                                @vue:updated="onFilterUpdated"
                                 :class="cx('filterInput')"
                                 :placeholder="filterPlaceholder"
                                 role="searchbox"
@@ -193,6 +195,7 @@ import BaseDropdown from './BaseDropdown.vue';
 export default {
     name: 'Dropdown',
     extends: BaseDropdown,
+    inheritAttrs: false,
     emits: ['update:modelValue', 'change', 'focus', 'blur', 'before-show', 'before-hide', 'show', 'hide', 'filter'],
     outsideClickListener: null,
     scrollHandler: null,

@@ -13,6 +13,7 @@
             :aria-checked="checked"
             :aria-labelledby="ariaLabelledby"
             :aria-label="ariaLabel"
+            :aria-invalid="invalid || undefined"
             @focus="onFocus"
             @blur="onBlur"
             @change="onChange"
@@ -28,10 +29,13 @@ import BaseInputSwitch from './BaseInputSwitch.vue';
 export default {
     name: 'InputSwitch',
     extends: BaseInputSwitch,
+    inheritAttrs: false,
     emits: ['update:modelValue', 'change', 'focus', 'blur'],
     methods: {
         getPTOptions(key) {
-            return this.ptm(key, {
+            const _ptm = key === 'root' ? this.ptmi : this.ptm;
+
+            return _ptm(key, {
                 context: {
                     checked: this.checked,
                     disabled: this.disabled

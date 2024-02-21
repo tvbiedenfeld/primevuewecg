@@ -1,5 +1,5 @@
 <template>
-    <span ref="container" :id="d_id" :class="cx('root')" :style="sx('root')" v-bind="ptm('root')">
+    <span ref="container" :id="d_id" :class="cx('root')" :style="sx('root')" v-bind="ptmi('root')">
         <input
             v-if="!inline"
             :ref="inputRef"
@@ -16,6 +16,7 @@
             :aria-controls="panelId"
             :aria-labelledby="ariaLabelledby"
             :aria-label="ariaLabel"
+            :aria-invalid="invalid || undefined"
             inputmode="none"
             :disabled="disabled"
             :readonly="!manualInput || readonly"
@@ -204,7 +205,9 @@
                                                             context: {
                                                                 date,
                                                                 today: date.today,
-                                                                otherMonth: date.otherMonth
+                                                                otherMonth: date.otherMonth,
+                                                                selected: isSelected(date),
+                                                                disabled: !date.selectable
                                                             }
                                                         })
                                                     "
@@ -224,6 +227,8 @@
                                                             ptm('dayLabel', {
                                                                 context: {
                                                                     date,
+                                                                    today: date.today,
+                                                                    otherMonth: date.otherMonth,
                                                                     selected: isSelected(date),
                                                                     disabled: !date.selectable
                                                                 }
@@ -521,6 +526,7 @@ import BaseCalendar from './BaseCalendar.vue';
 export default {
     name: 'Calendar',
     extends: BaseCalendar,
+    inheritAttrs: false,
     emits: ['show', 'hide', 'input', 'month-change', 'year-change', 'date-select', 'update:modelValue', 'today-click', 'clear-click', 'focus', 'blur', 'keydown'],
     navigationState: null,
     timePickerChange: false,
@@ -1808,7 +1814,7 @@ export default {
             let parts = text.split(' ');
 
             if (this.timeOnly) {
-                date = new Date(this.modelValue);
+                date = new Date();
                 this.populateTime(date, parts[0], parts[1]);
             } else {
                 const dateFormat = this.datePattern;

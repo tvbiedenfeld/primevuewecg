@@ -13,6 +13,7 @@ import BaseBadge from './BaseBadge.vue';
 export default {
     name: 'Badge',
     extends: BaseBadge,
+    inheritAttrs: false
     methods: {
         getPTOptions(key) {
             return this.ptm(key, {

@@ -1,5 +1,5 @@
 <template>
-    <button v-ripple :class="cx('root')" type="button" :aria-label="defaultAriaLabel" :disabled="disabled" v-bind="getPTOptions('root')" :data-pc-severity="severity">
+    <button v-ripple :class="cx('root')" type="button" :aria-label="defaultAriaLabel" :disabled="disabled" v-bind="getPTOptions('root')" :data-p-severity="severity">
         <slot>
             <slot v-if="loading" name="loadingIcon" :class="[cx('loadingIcon'), cx('icon')]">
                 <WecgIcon icon="loading" :class="cx('iconClass')" v-bind="ptm('loadingIcon')" label="loading" :size="size" :variant="variant" :disabled="disabled" spin></WecgIcon>
@@ -22,9 +22,12 @@ import WecgIcon from 'primevue/wecgicon/';
 export default {
     name: 'Button',
     extends: BaseButton,
+    inheritAttrs: false,
     methods: {
         getPTOptions(key) {
-            return this.ptm(key, {
+            const _ptm = key === 'root' ? this.ptmi : this.ptm;
+
+            return _ptm(key, {
                 context: {
                     disabled: this.disabled
                 }
