@@ -21,9 +21,13 @@ export default {
             type: null,
             default: false
         },
+        severity: {
+            type: String,
+            default: 'primary'
+        },
         variant: {
             type: String,
-            default: null
+            default: 'base'
         },
         invalid: {
             type: Boolean,
@@ -55,6 +59,10 @@ export default {
         },
         inputStyle: {
             type: Object,
+            default: null
+        },
+        size: {
+            type: String,
             default: null
         },
         ariaLabelledby: {

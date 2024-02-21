@@ -122,10 +122,15 @@ export interface CheckboxProps {
      */
     disabled?: boolean | undefined;
     /**
-     * Specifies the input variant of the component.
-     * @defaultValue outlined
+     * Defines the style of the checkbox.
+     * @defaultValue primary
      */
-    variant?: 'outlined' | 'filled' | undefined;
+    severity?: 'primary' | 'secondary' | 'soft' | 'contrast' | string | undefined;
+    /**
+     * Defines the variant of the checkbox.
+     * @defaultValue base
+     */
+    variant?: 'base' | 'danger' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
     /**
      * When present, it specifies that an input field is read-only.
      * @default false
@@ -162,6 +167,10 @@ export interface CheckboxProps {
      * Inline style of the input field.
      */
     inputStyle?: string | object | undefined;
+    /**
+     * Defines the size of the Checkbox.
+     */
+    size?: 'small' | 'medium' | 'large' | string | undefined;
     /**
      * Establishes relationships between the component and label(s) where its value should be one or more element IDs.
      */
