@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import CheckIcon from 'primevue/icons/check';
+import WecgIcon from 'primevue/wecgicon/';
 import { ObjectUtils } from 'primevue/utils';
 import BaseCheckbox from './BaseCheckbox.vue';
 
@@ -77,7 +77,7 @@ export default {
         }
     },
     components: {
-        CheckIcon
+        WecgIcon
     }
 };
 </script>
