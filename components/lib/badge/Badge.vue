@@ -9,6 +9,7 @@
 
 <script>
 import BaseBadge from './BaseBadge.vue';
+import WecgIcon from 'primevue/wecgicon/';
 
 export default {
     name: 'Badge',
@@ -30,6 +31,7 @@ export default {
         hasIcon() {
             return this.icon || this.$slots.icon;
         }
-    }
+    },
+    components: WecgIcon
 };
 </script>
