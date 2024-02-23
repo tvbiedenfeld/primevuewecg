@@ -9,7 +9,7 @@
 
 <script>
 import BaseBadge from './BaseBadge.vue';
-import WecgIcon from 'primevue/wecgicon/';
+import WecgIcon from 'primevue/wecgicon';
 
 export default {
     name: 'Badge',

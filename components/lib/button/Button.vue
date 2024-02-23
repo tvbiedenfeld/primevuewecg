@@ -17,7 +17,7 @@
 import Badge from 'primevue/badge';
 import Ripple from 'primevue/ripple';
 import BaseButton from './BaseButton.vue';
-import WecgIcon from 'primevue/wecgicon/';
+import WecgIcon from 'primevue/wecgicon';
 
 export default {
     name: 'Button',

@@ -8,11 +8,11 @@ export interface WecgIconProps {
     icon: string;
 }
 
-export interface IconSlots {}
+export interface WecgIconSlots {}
 
-export interface IconEmits {}
+export interface WecgIconEmits {}
 
-export declare class WecgIcon extends ClassComponent<WecgIconProps, IconSlots, IconEmits> {}
+export declare class WecgIcon extends ClassComponent<WecgIconProps, WecgIconSlots, WecgIconEmits> {}
 
 declare module '@vue/runtime-core' {
     interface GlobalComponents {

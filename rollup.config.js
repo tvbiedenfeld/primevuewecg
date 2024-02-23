@@ -14,6 +14,7 @@ let core = {};
 
 const CORE_ICON_DEPENDENCIES = {
     'primevue/baseicon': 'primevue.baseicon',
+    'primevue/wecgicon': 'primevue.wecgicon',
     'primevue/icons/angledoubledown': 'primevue.icons.angledoubledown',
     'primevue/icons/angledoubleleft': 'primevue.icons.angledoubleleft',
     'primevue/icons/angledoubleright': 'primevue.icons.angledoubleright',

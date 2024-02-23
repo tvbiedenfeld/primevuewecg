@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import WecgIcon from 'primevue/wecgicon/';
+import WecgIcon from 'primevue/wecgicon';
 import { ObjectUtils } from 'primevue/utils';
 import BaseCheckbox from './BaseCheckbox.vue';
 

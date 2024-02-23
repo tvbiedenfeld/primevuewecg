@@ -115,6 +115,7 @@ const STYLE_ALIAS = {
 
 const ICON_ALIAS = {
     'primevue/baseicon': path.resolve(__dirname, './components/lib/baseicon/BaseIcon.vue'),
+    'primevue/wecgicon': path.resolve(__dirname, './components/lib/wecgicon/WecgIcon.vue'),
     'primevue/icons/angledoubledown': path.resolve(__dirname, './components/lib/icons/angledoubledown/index.vue'),
     'primevue/icons/angledoubleleft': path.resolve(__dirname, './components/lib/icons/angledoubleleft/index.vue'),
     'primevue/icons/angledoubleright': path.resolve(__dirname, './components/lib/icons/angledoubleright/index.vue'),
