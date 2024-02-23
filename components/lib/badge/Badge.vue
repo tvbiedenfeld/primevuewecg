@@ -17,7 +17,9 @@ export default {
     inheritAttrs: false,
     methods: {
         getPTOptions(key) {
-            return this.ptm(key, {
+            const _ptm = key === 'root' ? this.ptmi : this.ptm;
+
+            return _ptm(key, {
                 context: {
                     disabled: this.disabled
                 }

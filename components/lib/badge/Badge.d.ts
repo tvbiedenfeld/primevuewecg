@@ -27,6 +27,10 @@ export interface BadgePassThroughMethodOptions<T> {
      */
     props: BadgeProps;
     /**
+     * Defines current options.
+     */
+    context: BadgeContext;
+    /**
      * Defines passthrough(pt) options in global config.
      */
     global: object | undefined;
