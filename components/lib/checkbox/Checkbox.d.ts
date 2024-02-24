@@ -130,7 +130,7 @@ export interface CheckboxProps {
      * Defines the variant of the checkbox.
      * @defaultValue base
      */
-    variant?: 'base' | 'danger' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
+    variant?: 'base' | 'danger' | 'warning' | 'success' | 'help' | 'info' | 'neutral' | string | undefined;
     /**
      * When present, it specifies that an input field is read-only.
      * @default false
