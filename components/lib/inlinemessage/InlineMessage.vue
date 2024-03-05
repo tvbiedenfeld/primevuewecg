@@ -1,20 +1,18 @@
 <template>
     <div role="alert" aria-live="assertive" aria-atomic="true" :class="cx('root')" v-bind="ptmi('root')">
         <slot name="icon">
-            <component :is="icon ? 'span' : iconComponent" :class="cx('icon')" v-bind="ptm('icon')"></component>
+            <WecgIcon v-if="icon" :icon="icon" :class="cx('icon')" v-bind="getPTOptions('icon')" :label="icon" :variant="variant"></WecgIcon>
+            <WecgIcon v-else :icon="iconCalculation" :class="cx('icon')" v-bind="getPTOptions('icon')" :label="iconCalculation" :variant="variant"></WecgIcon>
         </slot>
         <span :class="cx('text')" v-bind="ptm('text')">
-            <slot>&nbsp;</slot>
+            <slot />
         </span>
     </div>
 </template>
 
 <script>
-import CheckIcon from 'primevue/icons/check';
-import ExclamationTriangleIcon from 'primevue/icons/exclamationtriangle';
-import InfoCircleIcon from 'primevue/icons/infocircle';
-import TimesCircleIcon from 'primevue/icons/timescircle';
 import BaseInlineMessage from './BaseInlineMessage.vue';
+import WecgIcon from 'primevue/wecgicon';
 
 export default {
     name: 'InlineMessage',
@@ -34,14 +32,20 @@ export default {
         }
     },
     computed: {
-        iconComponent() {
+        iconCalculation() {
             return {
-                info: InfoCircleIcon,
-                success: CheckIcon,
-                warn: ExclamationTriangleIcon,
-                error: TimesCircleIcon
-            }[this.severity];
+                info: 'info',
+                success: 'check',
+                warn: 'trianglewarning',
+                danger: 'error',
+                error: 'error',
+                help: 'help',
+                base: 'bell'
+            }[this.variant];
         }
+    },
+    components: {
+        WecgIcon
     }
 };
 </script>

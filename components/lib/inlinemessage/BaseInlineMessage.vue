@@ -8,6 +8,10 @@ export default {
     props: {
         severity: {
             type: String,
+            default: 'primary'
+        },
+        variant: {
+            type: String,
             default: 'error'
         },
         icon: {

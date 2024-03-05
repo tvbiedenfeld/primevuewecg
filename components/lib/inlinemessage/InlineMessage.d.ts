@@ -91,10 +91,15 @@ export interface InlineMessageState {
  */
 export interface InlineMessageProps {
     /**
-     * Severity level of the message.
+     * Severity level of the inlinemessage.
      * @defaultValue info
      */
-    severity?: 'success' | 'info' | 'warn' | 'error' | 'secondary' | 'contrast' | string | undefined;
+    severity?: 'primary' | 'secondary' | 'soft' | 'contrast' | string | undefined;
+    /**
+     * Defines the variant of the inlinemessage.
+     * @defaultValue base
+     */
+    variant?: 'base' | 'danger' | 'error' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
     /**
      * Display a custom icon for the message.
      * @deprecated since v3.27.0. Use 'icon' slot.
