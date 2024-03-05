@@ -118,7 +118,12 @@ export interface MessageProps {
      * Severity level of the message.
      * @defaultValue info
      */
-    severity?: 'success' | 'info' | 'warn' | 'error' | 'secondary' | 'contrast' | string | undefined;
+    severity?: 'primary' | 'secondary' | 'soft' | 'contrast' | string | undefined;
+    /**
+     * Defines the variant of the button.
+     * @defaultValue base
+     */
+    variant?: 'base' | 'danger' | 'error' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
     /**
      * Whether the message can be closed manually using the close icon.
      * @defaultValue true
@@ -140,7 +145,7 @@ export interface MessageProps {
     icon?: string | undefined;
     /**
      * Icon to display in the message close button.
-     * @deprecated since v3.27.0. Use 'closeicon' slot.
+     * @deprecated in original Version since v3.27.0. Still valid in WECG-Fork
      */
     closeIcon?: string | undefined;
     /**
