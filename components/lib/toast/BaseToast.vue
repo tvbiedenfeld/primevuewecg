@@ -30,19 +30,7 @@ export default {
             type: String,
             default: undefined
         },
-        infoIcon: {
-            type: String,
-            default: undefined
-        },
-        warnIcon: {
-            type: String,
-            default: undefined
-        },
-        errorIcon: {
-            type: String,
-            default: undefined
-        },
-        successIcon: {
+        icon: {
             type: String,
             default: undefined
         },

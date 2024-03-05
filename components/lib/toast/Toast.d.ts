@@ -193,6 +193,16 @@ export interface ToastState {
  */
 export interface ToastProps {
     /**
+     * Severity level of the toast.
+     * @defaultValue info
+     */
+    severity?: 'primary' | 'secondary' | 'soft' | 'contrast' | string | undefined;
+    /**
+     * Defines the variant of the toast.
+     * @defaultValue base
+     */
+    variant?: 'base' | 'danger' | 'error' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
+    /**
      * Unique identifier of a message group.
      */
     group?: string | undefined;
@@ -218,29 +228,14 @@ export interface ToastProps {
     breakpoints?: ToastBreakpointsType;
     /**
      * Icon to display in the toast close button.
-     * @deprecated since v3.27.0. Use 'closeicon' slot.
+     * @deprecated in original Version since v3.27.0. Still valid in WECG-Fork
      */
     closeIcon?: string | undefined;
     /**
      * Icon to display in the toast with info severity.
-     * @deprecated since v3.27.0. Use 'icon' slot.
+     * @deprecated in original Version since v3.27.0. Still valid in WECG-Fork
      */
-    infoIcon?: string | undefined;
-    /**
-     * Icon to display in the toast with warn severity.
-     * @deprecated since v3.27.0. Use 'icon' slot.
-     */
-    warnIcon?: string | undefined;
-    /**
-     * Icon to display in the toast with error severity.
-     * @deprecated since v3.27.0. Use 'icon' slot.
-     */
-    errorIcon?: string | undefined;
-    /**
-     * Icon to display in the toast with success severity.
-     * @deprecated since v3.27.0. Use 'icon' slot.
-     */
-    successIcon?: string | undefined;
+    icon?: string | undefined;
     /**
      * Used to pass all properties of the HTMLButtonElement to the close button.
      * @deprecated since v3.26.0. Use 'pt' property.

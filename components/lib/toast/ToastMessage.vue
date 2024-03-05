@@ -3,16 +3,18 @@
         <component v-if="templates.container" :is="templates.container" :message="message" :onClose="onCloseClick" :closeCallback="onCloseClick" />
         <div v-else :class="[cx('content'), message.contentStyleClass]" v-bind="ptm('content')">
             <template v-if="!templates.message">
-                <component :is="templates.icon ? templates.icon : iconComponent && iconComponent.name ? iconComponent : 'span'" :class="cx('icon')" v-bind="ptm('icon')" />
+                <WecgIcon v-if="icon" :icon="icon" :class="cx('icon')" v-bind="getPTOptions('icon')" :label="icon" :variant="variant"></WecgIcon>
+                <WecgIcon v-else :icon="iconCalculation" :class="cx('icon')" v-bind="getPTOptions('icon')" :label="iconCalculation" :variant="variant"></WecgIcon>
                 <div :class="cx('text')" v-bind="ptm('text')">
-                    <span :class="cx('summary')" v-bind="ptm('summary')">{{ message.summary }}</span>
+                    <span v-if="message.summary" :class="cx('summary')" v-bind="ptm('summary')">{{ message.summary }}</span>
                     <div :class="cx('detail')" v-bind="ptm('detail')">{{ message.detail }}</div>
                 </div>
             </template>
             <component v-else :is="templates.message" :message="message"></component>
             <div v-if="message.closable !== false" v-bind="ptm('buttonContainer')">
                 <button v-ripple :class="cx('closeButton')" type="button" :aria-label="closeAriaLabel" @click="onCloseClick" autofocus v-bind="{ ...closeButtonProps, ...ptm('button'), ...ptm('closeButton') }">
-                    <component :is="templates.closeicon || 'TimesIcon'" :class="[cx('closeIcon'), closeIcon]" v-bind="{ ...ptm('buttonIcon'), ...ptm('closeIcon') }" />
+                    <WecgIcon v-if="closeIcon" :icon="closeIcon" :class="cx('closeIcon')" v-bind="{ ...getPTOptions('buttonIcon'), ...getPTOptions('closeIcon') }" :label="closeIcon" :variant="variant"></WecgIcon>
+                    <WecgIcon v-else :icon="'close'" :class="cx('closeIcon')" v-bind="{ ...getPTOptions('buttonIcon'), ...getPTOptions('closeIcon') }" :label="closeIcon" :variant="variant"></WecgIcon>
                 </button>
             </div>
         </div>
@@ -21,11 +23,7 @@
 
 <script>
 import BaseComponent from 'primevue/basecomponent';
-import CheckIcon from 'primevue/icons/check';
-import ExclamationTriangleIcon from 'primevue/icons/exclamationtriangle';
-import InfoCircleIcon from 'primevue/icons/infocircle';
-import TimesIcon from 'primevue/icons/times';
-import TimesCircleIcon from 'primevue/icons/timescircle';
+import WecgIcon from 'primevue/wecgicon';
 import Ripple from 'primevue/ripple';
 
 export default {
@@ -47,19 +45,7 @@ export default {
             type: String,
             default: null
         },
-        infoIcon: {
-            type: String,
-            default: null
-        },
-        warnIcon: {
-            type: String,
-            default: null
-        },
-        errorIcon: {
-            type: String,
-            default: null
-        },
-        successIcon: {
+        icon: {
             type: String,
             default: null
         },
@@ -94,24 +80,23 @@ export default {
         }
     },
     computed: {
-        iconComponent() {
+        iconCalculation() {
             return {
-                info: !this.infoIcon && InfoCircleIcon,
-                success: !this.successIcon && CheckIcon,
-                warn: !this.warnIcon && ExclamationTriangleIcon,
-                error: !this.errorIcon && TimesCircleIcon
-            }[this.message.severity];
+                info: 'info',
+                success: 'check',
+                warn: 'trianglewarning',
+                danger: 'error',
+                error: 'error',
+                help: 'help',
+                base: 'bell'
+            }[this.variant];
         },
         closeAriaLabel() {
             return this.$primevue.config.locale.aria ? this.$primevue.config.locale.aria.close : undefined;
         }
     },
     components: {
-        TimesIcon: TimesIcon,
-        InfoCircleIcon: InfoCircleIcon,
-        CheckIcon: CheckIcon,
-        ExclamationTriangleIcon: ExclamationTriangleIcon,
-        TimesCircleIcon: TimesCircleIcon
+        WecgIcon
     },
     directives: {
         ripple: Ripple
