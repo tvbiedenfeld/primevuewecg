@@ -31,14 +31,14 @@
             <INButton :class="[cx('incrementButton'), incrementButtonClass]" v-on="upButtonListeners" :disabled="disabled" :tabindex="-1" aria-hidden="true" v-bind="incrementButtonProps" :pt="ptm('incrementButton')" :unstyled="unstyled">
                 <template #icon>
                     <slot name="incrementbuttonicon">
-                        <component :is="incrementButtonIcon ? 'span' : 'AngleUpIcon'" :class="incrementButtonIcon" v-bind="ptm('incrementButton')['icon']" data-pc-section="incrementbuttonicon" />
+                        <WecgIcon :icon="incrementIconCalculation" :class="cx('incrementButtonIcon')" v-bind="getPTOptions('incrementButtonIcon')" :label="incrementIconCalculation" :variant="variant" :disabled="disabled"></WecgIcon>
                     </slot>
                 </template>
             </INButton>
             <INButton :class="[cx('decrementButton'), decrementButtonClass]" v-on="downButtonListeners" :disabled="disabled" :tabindex="-1" aria-hidden="true" v-bind="decrementButtonProps" :pt="ptm('decrementButton')" :unstyled="unstyled">
                 <template #icon>
                     <slot name="decrementbuttonicon">
-                        <component :is="decrementButtonIcon ? 'span' : 'AngleDownIcon'" :class="decrementButtonIcon" v-bind="ptm('decrementButton')['icon']" data-pc-section="decrementbuttonicon" />
+                        <WecgIcon :icon="decrementIconCalculation" :class="cx('decrementButtonIcon')" v-bind="getPTOptions('decrementButtonIcon')" :label="decrementIconCalculation" :variant="variant" :disabled="disabled"></WecgIcon>
                     </slot>
                 </template>
             </INButton>
@@ -56,7 +56,7 @@
         >
             <template #icon>
                 <slot name="incrementbuttonicon">
-                    <component :is="incrementButtonIcon ? 'span' : 'AngleUpIcon'" :class="incrementButtonIcon" v-bind="ptm('incrementButton')['icon']" data-pc-section="incrementbuttonicon" />
+                    <WecgIcon :icon="incrementIconCalculation" :class="cx('incrementButtonIcon')" v-bind="getPTOptions('incrementButtonIcon')" :label="incrementIconCalculation" :variant="variant" :disabled="disabled"></WecgIcon>
                 </slot>
             </template>
         </INButton>
@@ -73,7 +73,7 @@
         >
             <template #icon>
                 <slot name="decrementbuttonicon">
-                    <component :is="decrementButtonIcon ? 'span' : 'AngleDownIcon'" :class="decrementButtonIcon" v-bind="ptm('decrementButton')['icon']" data-pc-section="decrementbuttonicon" />
+                    <WecgIcon :icon="decrementIconCalculation" :class="cx('decrementButtonIcon')" v-bind="getPTOptions('decrementButtonIcon')" :label="decrementIconCalculation" :variant="variant" :disabled="disabled"></WecgIcon>
                 </slot>
             </template>
         </INButton>
@@ -82,11 +82,10 @@
 
 <script>
 import Button from 'primevue/button';
-import AngleDownIcon from 'primevue/icons/angledown';
-import AngleUpIcon from 'primevue/icons/angleup';
 import InputText from 'primevue/inputtext';
 import { DomHandler, ObjectUtils } from 'primevue/utils';
 import BaseInputNumber from './BaseInputNumber.vue';
+import WecgIcon from 'primevue/wecgicon';
 
 export default {
     name: 'InputNumber',
@@ -990,13 +989,26 @@ export default {
         },
         getFormatter() {
             return this.numberFormat;
+        },
+        incrementIconCalculation() {
+            if (!this.incrementButtonIcon && this.buttonLayout === 'stacked') {
+                return 'chevronup';
+            }
+
+            return 'plus';
+        },
+        decrementIconCalculation() {
+            if (!this.decrementButtonIcon && this.buttonLayout === 'stacked') {
+                return 'chevrondown';
+            }
+
+            return 'minus';
         }
     },
     components: {
+        WecgIcon,
         INInputText: InputText,
-        INButton: Button,
-        AngleUpIcon: AngleUpIcon,
-        AngleDownIcon: AngleDownIcon
+        INButton: Button
     }
 };
 </script>
