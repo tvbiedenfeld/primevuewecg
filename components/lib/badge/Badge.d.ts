@@ -93,6 +93,11 @@ export interface BadgeProps {
      */
     iconClass?: string | undefined;
     /**
+     * Defines the style of the badge.
+     * @defaultValue primary
+     */
+    severity?: 'primary' | 'secondary' | 'soft' | 'contrast' | string | undefined;
+    /**
      * Defines the variant of the badge.
      * @defaultValue base
      */

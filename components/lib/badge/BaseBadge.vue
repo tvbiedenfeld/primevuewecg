@@ -22,9 +22,13 @@ export default {
             type: String,
             default: null
         },
+        severity: {
+            type: String,
+            default: 'primary'
+        },
         variant: {
             type: String,
-            default: null
+            default: 'base'
         },
         size: {
             type: String,

@@ -119,7 +119,11 @@ export interface ButtonProps extends ButtonHTMLAttributes {
     /**
      * Severity type of the badge.
      */
-    badgeSeverity?: 'secondary' | 'info' | 'success' | 'warning' | 'danger' | 'contrast' | string | null | undefined;
+    badgeSeverity?: 'primary' | 'secondary' | 'soft' | 'contrast' | string | undefined;
+    /**
+     * Variant type of the badge.
+     */
+    badgeVariant?: 'base' | 'danger' | 'warning' | 'success' | 'help' | 'info' | string | undefined;
     /**
      * Whether the button is in loading state.
      * @defaultValue false

@@ -8,7 +8,7 @@
                 <WecgIcon v-if="icon" :icon="icon" :class="cx('iconClass')" v-bind="getPTOptions('icon')" :label="icon" :size="size" :variant="variant" :disabled="disabled"></WecgIcon>
             </slot>
             <span :class="cx('label')" v-bind="ptm('label')">{{ label || '&nbsp;' }}</span>
-            <Badge v-if="badge" :value="badge" :class="badgeClass" :severity="badgeSeverity" :unstyled="unstyled" v-bind="ptm('badge')"></Badge>
+            <Badge v-if="badge" :value="badge" :class="badgeClass" :variant="badgeVariant" :severity="badgeSeverity" :unstyled="unstyled" v-bind="ptm('badge')"></Badge>
         </slot>
     </button>
 </template>
